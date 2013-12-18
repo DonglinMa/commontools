@@ -21,6 +21,14 @@
 			<groupId>com.donglinma</groupId>
 			<artifactId>utils</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>webtools</finalName>

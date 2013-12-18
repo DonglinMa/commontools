@@ -14,13 +14,18 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>3.2.5.RELEASE</spring.version>
+		<junit.version>4.10</junit.version>
+		<guava.version>14.0.1</guava.version>
+		<slf4j.verison>1.7.5</slf4j.verison>
+		<servlet.version>2.5</servlet.version>
+		<opencvs.version>2.3</opencvs.version>
 	</properties>
 	<dependencyManagement>
 		<!-- project model -->
 		<dependencies>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
-				<artifactId>util</artifactId>
+				<artifactId>utils</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
@@ -30,6 +35,37 @@
 				<artifactId>spring-webmvc</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
+			
+			<!-- test -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit-dep</artifactId>
+				<version>${junit.version}</version>
+			</dependency>
+			
+			<!-- gauva -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+			
+			<!-- log -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.verison}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${servlet.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.opencsv</groupId>
+				<artifactId>opencsv</artifactId>
+				<version>${opencvs.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -37,4 +73,14 @@
 		<module>utils</module>
 		<module>webtools</module>
 	</modules>
+	<dependencies>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+	</dependencies>
 </project>
